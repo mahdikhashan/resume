@@ -1,7 +1,5 @@
 name: Build LaTeX document
 on: [push]
-env:
-    GH_TOKEN: ${{ github.token }}
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -26,7 +24,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     environment: main
     env:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: Download PDF artifact
         uses: actions/download-artifact@v4
