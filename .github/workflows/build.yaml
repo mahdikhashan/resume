@@ -1,0 +1,57 @@
+name: Build LaTeX document
+on: [push]
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v1
+
+      - uses: wtfjoke/setup-tectonic@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - run: tectonic main.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: resume
+          retention-days: 5
+          path: main.pdf
+  release_pdf:
+    needs: build_latex
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    environment: main
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+    steps:
+      - name: Download PDF artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: resume
+      - name: Publish resume
+        run: |
+          gh-release () {
+            gh release --repo '${{ github.repository }}' "$@"
+          }
+
+          mv main.pdf mahdi_resume.pdf
+
+          gh-release view latest \
+          || gh-release create \
+            --latest \
+            --title "Latest Resume" \
+            --notes "Latest resume build from GitHub Actions" \
+            --target main \
+            latest \
+            mahdi_resume.pdf
+
+          gh-release edit \
+            --target main \
+            latest
+
+          gh-release upload \
+            --clobber \
+            latest \
+            mahdi_resume.pdf
