@@ -41,72 +41,75 @@
 \section{Work Experience}
 
 \WorkExperience
-    {AI Engineer} % job title
-    {Kubeflow} % company name
-    {November 2024 --- October 2025} % beginning and end of employment. If currently employed write " -- Present"
+    {Software Engineer Intern (LFX Mentorship)} % job title
+    {\href{https://volcano.sh/}{Linux Foundation (LFX), backed by CNCF}} % company name
+    {June 2025 --- August 2025} % beginning and end of employment
     {Remote} % city, country of employment
     {
-        \item Built cloud-native ML application development platform. Deployed k8s, ArgoCD, kubeflow, and opentelemetry.
-        \item Migrated docker-compose development environments to k8s using skaffold and jsonnet.
-    } 
+        % TODO: link to issue
+        \item Mentee for \href{https://volcano.sh/}{Volcano} in LFX Mentorship 2025 Term 2, enhancing \code{JobFlow} functionality by implementing new features.
+    }
 
 \WorkExperience
-    {AI Engineer} % job title
-    {\href{https://www.aspiration.com/}{Aspiration}} % company name
-    {January 2022 --- May 2023} % beginning and end of employment
+    {Software Engineer Intern (Google Summer of Code)} % job title
+    {\href{https://www.kubeflow.org/}{Kubeflow}} % company name
+    {May 2025 --- September 2025} % beginning and end of employment
     {Remote} % city, country of employment
     {
-        \item Implemented CircleCI Orb to install and run \code{pre-commit} hooks to enforce code quality tools in CI pipelines.
-        \item Introduced end-to-end tests to serverless functions using \code{sam local invoke}, ending a series of damaging incidents caused by faulty Lambda configurations being merged into \code{main} without being tested.
-        \item Spearheaded wider adoption of \textit{distributed tracing} by contributing Datadog APM Twirp middleware to the org's shared middleware library.
-        \item Used Snowflake to diagnose a low-probability bug that was causing some customers to be overcharged.
-        \item Created Backstage onboarding workflow to streamline adoption of the new development platform.
-        \item Developed customer-facing gRPC services with golang, kubernetes, terraform, and AWS Lambda.
+        % TODO: links to first proposal, project info, acceptance letter
+        \item Mentee for Kubeflow in Google Summer of Code 2025 as a new open source contributor.
+        \item Contributed to Kubeflow Trainer V2 by implementing JAX and TensorFlow runtimes based on the Kubernetes \code{JobSet} API.
     }
 
 \WorkExperience
-    {Tech Lead - MLOps} % job title
-    {\href{https://www.ford.com/}{Ford Motor Company}} % company name
-    {February 2020 --- January 2022} % beginning and end of employment
-    {Dearborn, MI / Remote} % city, country of employment
+    {Software Engineer Intern (Google Summer of Code)} % job title
+    {\href{https://webpack.js.org/}{Webpack}} % company name
+    {May 2024 --- July 2024} % beginning and end of employment
+    {Remote} % city, country of employment
     {
-        \item Promoted use of modern python development tools, including \code{poetry}, \code{black}, \code{pre-commit}, and \code{tox}
-        \item Mentored a growing team of 5--10 Data Scientists and Software Engineers.
-        \item Designed a system to streamline the request of new pypi packages / versions, saving hundreds of labor hours. 
-        \item Built a POC python SDK for Ford's ML platform.
-        \item Deployed >10 ML models to production, using scikit-learn, tensorflow, datarobot, and xgboost.
-        \item Wrangled data with kubernetes, pandas, dask, dagster, airflow, and argo workflows.
+        % TODO: link to verification letter
+        \item Mentee for Webpack in Google Summer of Code 2024 as a new open source contributor; contributed to \code{webpack-dev-server}.
     }
 
 \WorkExperience
-    {Data Scientist} % job title
-    {\href{https://www.ford.com/}{Ford Motor Company}} % company name
-    {November 2017 --- February 2020} % beginning and end of employment
-    {Dearborn, MI} % city, country of employment
+    {Software Developer (Short Contract)} % job title
+    {Johannes Kepler University --- LIFT\_C Lab} % company name
+    {April 2024 --- June 2024} % beginning and end of employment
+    {Linz, AT} % city, country of employment
     {
-        \item Used pyspark / SparkML to train and score a likelihood-to-purchase model on ~100M non-customers.
-        \item Converted ad-hoc notebooks into production-ready, version-controlled code.
-        \item Contributed a python package to simplify the process of instantiating a pyspark driver on Ford's on-prem computing cluster.
-        \item Drove adoption of test-driven-development and static code analysis for python libraries, data pipelines, and Flask services.
+        \item Improved website accessibility by adding a Playwright quality gate that prevents non-accessible code from being merged.
+        \item Designed a usability test for impaired users and developed manual testing scenarios to ensure the website conforms to WCAG level AA.
     }
 
 \WorkExperience
-    {Software Engineer Intern} % job title
-    {\href{https://sites.disney.com/waltdisneyimagineering/}{Walt Disney Imagineering}} % company name
-    {June --- September 2017} % beginning and end of employment
-    {Glendale, CA} % city, country of employment
+    {Software Engineer} % job title
+    {Pyango GmbH} % company name
+    {January 2021 --- March 2022} % beginning and end of employment
+    {} % city, country of employment
     {
-        \item Contributed to \href{https://en.wikipedia.org/wiki/Projection_mapping}{projection mapping} software that is used by many attractions that are each worth over \$100M.
+        \item Developed dynamic dashboards and a visually appealing landing page for a headless e-commerce solution with Vue 2, GraphQL, and Nuxt 2.
+        \item Implemented robust unit tests with Jest and Vue Test Utils.
     }
+\vspace{-10pt}
+%-------------------------------------------------------------------------------
+%                Projects
+%-------------------------------------------------------------------------------
 
-\WorkExperience
-    {Software Engineer Intern} % job title
-    {\href{https://intel.com}{Intel}} % company name
-    {June --- September 2017} % beginning and end of employment
-    {Glendale, CA} % city, country of employment
-    {
-        \item Worked on desktop application used to control advanced electronics manufacturing robot.
-    }
+\section{Projects}
+
+% TODO: wrap each project name in \href{<url>}{...}
+\Project
+    {Machine Learning Operations Pipeline} % project name
+    {Multi-step pipeline to pre-process data, validate, train, and evaluate robustness with Metaflow and MLflow.} % description
+
+\Project
+    {MLOps Pipeline for Distributed Model Training with Kubeflow} % project name
+    {MLOps pipeline leveraging the cloud-native Kubeflow project for model training and registration with MLflow.} % description
+
+\Project
+    {Azure Batch Processing Pipeline} % project name
+    {} % description
+
 \vspace{-10pt}
 %-------------------------------------------------------------------------------
 %                Certifications
@@ -129,8 +132,14 @@
 \EducationExperience
     {Johannes Kepler University Linz} % school name
     {MS Artificial Intelligence} % credential name
-    {Present} % date of graduation
-    {Linz, OÖ} % city, country of school
+    {September 2023 --- Present (expected SS 2026)} % date of graduation
+    {Linz, AT} % city, country of school
+
+\EducationExperience
+    {Technische Universität Wien} % school name
+    {Non-degree Student} % credential name
+    {March 2025 --- Present} % date of graduation
+    {Vienna, AT} % city, country of school
 
 \vspace{-14pt}
 %-------------------------------------------------------------------------------
@@ -142,9 +151,8 @@
 \vspace{1pt}
 
 \SkillList{
-    \SkillItem{Languages}{: Python, Golang, TypeScript}
-    \SkillItem{Frameworks}{: Flask}
-    \SkillItem{Platforms}{: Azure, GCP, Kubernetes}
+    \SkillItem{Languages}{: Python, Go}
+    \SkillItem{Platforms}{: Kubernetes, Azure (Batch, Data Factory)}
 }
 
 \end{document}

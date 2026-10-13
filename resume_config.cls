@@ -110,6 +110,17 @@
     \end{itemize}
 }
 
+\newcommand{\Project}[2]{
+    \noindent
+    \textbf{#1}
+
+    \ifblank{#2}{}{
+        \begin{itemize}[noitemsep, topsep=0pt, leftmargin=1em]
+            \item #2
+        \end{itemize}
+    }
+}
+
 \newcommand{\Certification}[3]{
     \noindent
     \textbf{#1} $|$ {#2}\hfill \textit{#3}\\
