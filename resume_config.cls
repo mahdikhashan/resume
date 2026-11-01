@@ -69,7 +69,7 @@
 
 % section title format
 \titleformat{\section}%
-    {\vspace{-4pt}\scshape\raggedright\large\bfseries}% format
+    {\vspace{0pt}\scshape\raggedright\large\bfseries}% format
     {}% label
     {0em}% space between label and title
     {}% before code
