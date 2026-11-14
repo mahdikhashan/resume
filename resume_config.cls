@@ -85,11 +85,12 @@
     \hspace{0.5em}%
 }
 
-\NewDocumentCommand{\Header}{m m m m m m o}{
+\NewDocumentCommand{\Header}{m m m m m m o o}{
     \fancyhf{}
     \begin{center}
         {\Huge\textbf{#1}}\\[6pt]
-        \href{mailto:#4}{#4}\\[4pt]
+        \href{mailto:#4}{#4}
+        \IfValueT{#8}{\quad\textbar\quad \href{mailto:#8}{#8}}\\[4pt]
         \faLinkedin\ \href{https://linkedin.com/in/#5}{#5}
         \IfValueT{#7}{\quad\textbar\quad \faGraduationCap\ \href{#7}{Google Scholar}}
         \quad\textbar\quad \faGithub\ \href{https://github.com/#6}{#6}\\[6pt]
