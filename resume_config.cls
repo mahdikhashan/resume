@@ -122,6 +122,17 @@
     }
 }
 
+\newcommand{\ProjectEntry}[3]{
+    \noindent
+    \begin{tabular*}{\textwidth}{@{}l @{\extracolsep{\fill}} r}
+        \textbf{#1} & \textit{#2} \\
+    \end{tabular*}
+
+    \begin{itemize}[noitemsep, topsep=0pt, leftmargin=1em]
+        #3
+    \end{itemize}
+}
+
 \newcommand{\Certification}[3]{
     \noindent
     \textbf{#1} $|$ {#2}\hfill \textit{#3}\\
