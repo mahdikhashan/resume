@@ -88,12 +88,13 @@
 \NewDocumentCommand{\Header}{m m m m m m o}{
     \fancyhf{}
     \begin{center}
-        {\Huge\textbf{\textsc{\textcolor{NavyBlue}{#1}}}}\\[4pt]
-        \textcolor{black}{
-            #2 \CustomBullet #3 \CustomBullet \href{mailto:#4}{#4} \\
-            \href{https://linkedin.com/in/#5}{linkedin.com/in/#5} \CustomBullet \href{https://github.com/#6}{github.com/#6}
-            \IfValueT{#7}{\\ \href{#7}{Google Scholar}}
-        }\\[3pt]
+        {\Huge\textbf{\MakeUppercase{#1}}}\\[6pt]
+        \href{mailto:#4}{#4}\\[4pt]
+        \faLinkedin\ \href{https://linkedin.com/in/#5}{#5}
+        \IfValueT{#7}{\quad\textbar\quad \faGraduationCap\ \href{#7}{Google Scholar}}
+        \quad\textbar\quad \faGithub\ \href{https://github.com/#6}{#6}\\[6pt]
+        #2 \CustomBullet #3\\[4pt]
+        {\small\color{gray} Last updated: \today\ \ifnum\numexpr\time/60\relax<10 0\fi\number\numexpr\time/60\relax:\ifnum\numexpr\time-60*\numexpr\time/60\relax<10 0\fi\number\numexpr\time-60*\numexpr\time/60\relax\ UTC}
     \end{center}
     \vspace{-15pt}
 }
