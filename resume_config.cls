@@ -92,7 +92,7 @@
         \textcolor{black}{
             #2 \CustomBullet #3 \CustomBullet \href{mailto:#4}{#4} \\
             \href{https://linkedin.com/in/#5}{linkedin.com/in/#5} \CustomBullet \href{https://github.com/#6}{github.com/#6}
-            \IfValueT{#7}{ \CustomBullet \href{#7}{#7}}
+            \IfValueT{#7}{\\ \href{#7}{Google Scholar}}
         }\\[3pt]
     \end{center}
     \vspace{-15pt}
