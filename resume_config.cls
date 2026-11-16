@@ -89,8 +89,8 @@
     \fancyhf{}
     \begin{center}
         {\Huge\textbf{#1}}\\[6pt]
-        \href{mailto:#4}{#4}
-        \IfValueT{#8}{\quad\CustomBullet\quad \href{mailto:#8}{#8}}\\[4pt]
+        #4
+        \IfValueT{#8}{\quad\CustomBullet\quad #8}\\[4pt]
         \faLinkedin\ \href{https://linkedin.com/in/#5}{#5}
         \IfValueT{#7}{\quad\CustomBullet\quad \faGraduationCap\ \href{#7}{Google Scholar}}
         \quad\CustomBullet\quad \faGithub\ \href{https://github.com/#6}{#6}\\[6pt]
